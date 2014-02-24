@@ -1,7 +1,9 @@
 (ns kba-clj.core
   (:require [clojure.java.io :as io]
             [thrift-clj.core :as thrift])
+  (:use [byte-streams])
   (:import [java.io FileInputStream]
+           [java.nio.charset Charset]
            [org.apache.thrift.protocol TBinaryProtocol]
            [org.apache.thrift.transport
             TIOStreamTransport
@@ -27,4 +29,12 @@
                  (catch TTransportException e (do (.close itransport)
                                                   nil))))))))))
 
-
+(defn stream-links
+  [a-stream]
+  (let [cset (Charset/forName "UTF-8")]
+   (map
+    (fn [an-item]
+      (convert
+       (.abs_url an-item)
+       String))
+    a-stream)))
