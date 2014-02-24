@@ -6,7 +6,7 @@ A Clojure library designed to speak to the KBA streamcorpus. We use java files s
 
     lein trampoline run <corpus-path> will dump unique hosts from each file.
     
-    I will upload this to clojars soon.
+I will upload this to clojars soon.
 
 ## License
 
