@@ -1,14 +1,15 @@
 # kba_clj
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to speak to the KBA streamcorpus. We use java files straight from the KBA project
 
 ## Usage
 
-FIXME
+    lein trampoline run <corpus-path> will dump unique hosts from each file.
+    
+    I will upload this to clojars soon.
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Carnegie Mellon University
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the BSD v 2.0 License.
